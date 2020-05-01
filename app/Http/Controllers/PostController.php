@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 use App\Post;
 use Illuminate\Http\Request;
- 
+use   App\Http\Requests\post\CreatePost;
+
 class PostController extends Controller
 {
     /**
@@ -21,9 +22,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(CreatePost $request)
     {
-        
+        $content = $request->content;
+  
     }
 
     /**
